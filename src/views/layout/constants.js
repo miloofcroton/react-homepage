@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+
+  @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
+
   #root {
     display: flex;
     flex-direction: column;
@@ -9,19 +12,26 @@ export const GlobalStyle = createGlobalStyle`
     text-align: center;
     margin: 0;
   }
+
   html {
     box-sizing: border-box;
     font-size: 10px;
   }
+
   *, *:before, *:after {
-    box-sizing: inherit;
+    font-family: 'Roboto Mono', monospace;
+    box-sizing: border-box;
   }
+
   body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     padding: 0;
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
   }
+
 `;
 
 export const theme = {
@@ -30,3 +40,11 @@ export const theme = {
   darksecondary: 'rgb(107, 48, 13)',
   accent: 'rgb(173, 38, 36)'
 };
+
+// export const theme = {
+//   darkgreen: 'rgb(0,230,118)',
+//   lightgreen: 'rgb(180,241,87)',
+//   black: 'rgb(33,33,33)',
+//   grey: 'rgb(196,196,196)',
+//   white: 'rgb(255,255,255)',
+// };
