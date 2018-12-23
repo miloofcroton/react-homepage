@@ -1,12 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
-
-const StyledFooter = styled.footer`
-  color: black;
-  p {
-    margin: 5px auto;
-  }
-`;
 
 const GithubLink = styled.a`
   font-weight: bolder;
@@ -15,15 +8,16 @@ const GithubLink = styled.a`
   color: black;
 `;
 
-const Footer = () => {
+const Statements = () => {
+
   return (
-    <StyledFooter>
+    <Fragment>
       <p>Copyright &copy; 2018. All rights reserved.</p>
       <GithubLink href="https://github.com/miloofcroton/portfolio">This website</GithubLink>
       {' by '}
       <GithubLink href="https://github.com/miloofcroton">me</GithubLink>.
-    </StyledFooter>
+    </Fragment>
   );
 };
 
-export default Footer;
+export default Statements;

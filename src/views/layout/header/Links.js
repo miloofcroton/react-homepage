@@ -1,6 +1,6 @@
 import React from 'react';
-import { ROUTES } from './constants';
-import { StyledLink } from '../styles/Links';
+import { ROUTES } from '../../routes/constants';
+import { StyledLink } from '../../styles/Links';
 
 export const AllLinks = () => {
   return Object

@@ -7,8 +7,11 @@ import { ThemeProvider } from 'styled-components';
 import { theme, GlobalStyle } from './layout/constants';
 
 import Head from './layout/Head';
-import Header from './layout/Header';
-import Footer from './layout/Footer';
+import Header from './layout/header';
+import Footer from './layout/footer';
+
+import addIcons from './layout/fontAwesome';
+addIcons();
 
 const App = () => {
 

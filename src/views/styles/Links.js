@@ -13,8 +13,5 @@ export const StyledLink = styled(Link)`
 
   &:hover {
     background-color: ${ ({ theme }) => theme.lightgreen};
-
-    /* color: ${ ({ theme }) => theme.darksecondary};
-    border: 1px solid ${ ({ theme }) => theme.darksecondary}; */
   }
 `;
