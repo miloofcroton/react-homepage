@@ -17,7 +17,7 @@ export const promiseRunner = store => next => action => {
     errorType = PROMISE_ERROR
   } = action;
 
-  if(!isPromise(payload)) return next(action);
+  if (!isPromise(payload)) return next(action);
 
   dispatch({ type: loadStart });
 
