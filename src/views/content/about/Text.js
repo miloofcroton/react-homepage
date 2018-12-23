@@ -4,7 +4,7 @@ const Text = () => {
   return (
     <Fragment>
       <p>
-        This site is designed to be a single website that can house pretty much everything I want to publically publish on the internet
+        This site is designed to be a single website that can house pretty much everything I want to publicly publish on the internet
       </p>
       <p>
         The <strong>Work</strong> section is for my professional connections. I list the projects that I've worked on (searchable by keyword) and give a brief overview of myself.
