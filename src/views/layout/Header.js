@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { rootLinks } from '../../routes';
+import { rootLinks } from '../routes';
 
 
 const StyledHeader = styled.header`

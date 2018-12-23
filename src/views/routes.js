@@ -1,11 +1,13 @@
 // react and redux
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Route } from 'react-router-dom';
+
+// link style
+import { StyledLink } from './styles/Links';
 
 // core pages
-import About from '../components/content/about';
-import Home from '../components/content/home';
+import About from './content/about';
+import Home from './content/home';
 
 export const ROUTES = {
   ABOUT: {
@@ -25,22 +27,6 @@ export const LINKS = [
   { label: 'About', path: '/about' }
 ];
 
-
-
-const StyledLink = styled(Link)`
-  box-sizing: border - box;
-
-  text-decoration: none;
-  color: ${ ({ theme }) => theme.secondary};
-  margin: 5px;
-  padding: 8px;
-  border: 1px solid white;
-
-  &:hover {
-    color: ${ ({ theme }) => theme.darksecondary};
-    border: 1px solid ${ ({ theme }) => theme.darksecondary};
-  }
-`;
 
 export const rootLinks = () => {
   return Object.keys(ROUTES)
