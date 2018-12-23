@@ -19,6 +19,7 @@ export const NavLinks = () => {
   return Object
     .values(ROUTES)
     .filter(route => route.nav === true)
+    .sort((a, b) => a.order - b.order)
     .map((route, i) => (
       <StyledLink
         key={i}

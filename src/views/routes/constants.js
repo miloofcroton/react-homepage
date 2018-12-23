@@ -8,6 +8,7 @@ export const ROUTES = {
     path: '/about',
     linkTo: () => '/about',
     nav: true,
+    order: 2,
     label: 'About',
   },
   HOME: {
@@ -16,6 +17,7 @@ export const ROUTES = {
     linkTo: () => '/home',
     default: true,
     nav: true,
+    order: 1,
     label: 'Home',
   },
 };
