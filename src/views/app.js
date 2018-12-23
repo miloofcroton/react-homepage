@@ -16,11 +16,11 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Fragment>
-          <Head />
-          <GlobalStyle />
-          <Header />
+          <Head/>
+          <GlobalStyle/>
+          <Header/>
           <Switch>{Switches()}</Switch>
-          <Footer />
+          <Footer/>
         </Fragment>
       </BrowserRouter>
     </ThemeProvider>
