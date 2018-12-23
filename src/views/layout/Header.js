@@ -1,17 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { rootLinks } from '../routes';
 
+import { AllLinks } from '../routes/Links';
 
-const StyledHeader = styled.header`
-  background-color: ${ ({ theme }) => theme.primary };
-  color: ${ ({ theme }) => theme.secondary };
-`;
-
-const StyledNav = styled.nav`
-  margin: 0px 0px 15px 0px;
-`;
+import { StyledNav } from '../styles/Nav';
+import { StyledHeader } from '../styles/Header';
 
 const Header = () => {
 
@@ -19,7 +11,7 @@ const Header = () => {
     <StyledHeader>
       <h1>Jack Toumey</h1>
       <StyledNav>
-        {rootLinks()}
+        {AllLinks()}
       </StyledNav>
     </StyledHeader>
   );
