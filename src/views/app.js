@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react';
 
 import { BrowserRouter, Switch, Redirect } from 'react-router-dom';
-import { routerRoutes, ROUTES } from './routes';
+import { ROUTES } from './routes/constants';
+import { Switches } from './routes/Switches';
 
 import { Helmet } from 'react-helmet';
 
 import { ThemeProvider } from 'styled-components';
-import { theme } from './layout/Theme';
-import { GlobalStyle } from './layout/GlobalStyle';
+import { theme, GlobalStyle } from './layout/constants';
 
 import Header from './layout/Header';
 import Footer from './layout/Footer';
@@ -28,7 +28,7 @@ const App = () => {
           <Header />
 
           <Switch>
-            {routerRoutes()}
+            {Switches()}
             <Redirect to={ROUTES.HOME.path} />
           </Switch>
 
