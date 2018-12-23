@@ -1,10 +1,10 @@
 import { createStore } from 'redux';
 
-import { rootReducer } from './resources';
+import { combinedReducers } from './resources';
 import { composedEnhancers } from './middleware';
 
 const store = createStore(
-  rootReducer,
+  combinedReducers,
   composedEnhancers
 );
 
