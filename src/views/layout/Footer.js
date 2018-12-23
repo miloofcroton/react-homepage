@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
-  background-color: ${ ({ theme }) => theme.primary };
+  background-color: ${ ({ theme }) => theme.primary};
   p {
-      color: ${ ({ theme }) => theme.secondary };
+      color: ${ ({ theme }) => theme.secondary};
   }
 `;
 
