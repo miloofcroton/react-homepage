@@ -16,9 +16,9 @@ const Footer = () => {
 
   return (
     <StyledFooter>
-      <Logo />
-      <Statements />
-      <IconList />
+      <Logo/>
+      <Statements/>
+      <IconList/>
     </StyledFooter>
   );
 };

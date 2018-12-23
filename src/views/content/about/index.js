@@ -1,11 +1,26 @@
 import React from 'react';
+import styled from 'styled-components';
+import Greeting from './Greeting';
+import Text from './Text';
+
+const AboutSection = styled.section`
+  span {
+    margin: 50px auto;
+    font-size: 30px;
+  }
+  p {
+    width: 60%;
+    text-align: left;
+    margin: 25px auto;
+  }
+`;
 
 const About = () => {
   return (
-    <section>
-      <h2>About this site</h2>
-      <p>I want a portfolio, serious blog, and playful blog all in one. We'll see if it turns out how I want it to.</p>
-    </section>
+    <AboutSection>
+      <Greeting/>
+      <Text/>
+    </AboutSection>
   );
 };
 
