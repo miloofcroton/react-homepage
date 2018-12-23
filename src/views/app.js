@@ -1,14 +1,12 @@
 import React, { Fragment } from 'react';
 
-import { BrowserRouter, Switch, Redirect } from 'react-router-dom';
-import { ROUTES } from './routes/constants';
-import { Switches } from './routes/Switches';
-
-import { Helmet } from 'react-helmet';
+import { BrowserRouter, Switch } from 'react-router-dom';
+import Switches from './routes/Switches';
 
 import { ThemeProvider } from 'styled-components';
 import { theme, GlobalStyle } from './layout/constants';
 
+import Head from './layout/Head';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 
@@ -18,22 +16,11 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Fragment>
-
-          <Helmet>
-            <title>Jack Toumey</title>
-          </Helmet>
-
-          <GlobalStyle/>
-
+          <Head />
+          <GlobalStyle />
           <Header />
-
-          <Switch>
-            {Switches()}
-            <Redirect to={ROUTES.HOME.path} />
-          </Switch>
-
+          <Switch>{Switches()}</Switch>
           <Footer />
-
         </Fragment>
       </BrowserRouter>
     </ThemeProvider>

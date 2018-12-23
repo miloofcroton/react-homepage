@@ -1,9 +1,18 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import { ROUTES } from './constants';
 
-export const Switches = () => {
-  return Object.values(ROUTES)
+const defaultRoute = () => {
+  return Object
+    .values(ROUTES)
+    .find(route => route.default === true)
+    .path;
+};
+
+const Switches = () => {
+
+  return Object
+    .values(ROUTES)
     .map((route, i) => (
       <Route
         key={i}
@@ -11,5 +20,8 @@ export const Switches = () => {
         path={route.path}
         component={route.Component}
       />
-    ));
+    ))
+    .concat(<Redirect key={'default'} to={defaultRoute()} />);
 };
+
+export default Switches;

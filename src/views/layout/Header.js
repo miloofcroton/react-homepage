@@ -1,5 +1,5 @@
 import React from 'react';
-import { AllLinks } from '../routes/Links';
+import { NavLinks } from '../routes/Links';
 import styled from 'styled-components';
 
 const StyledNav = styled.nav`
@@ -17,7 +17,7 @@ const Header = () => {
     <StyledHeader>
       <h1>Jack Toumey</h1>
       <StyledNav>
-        {AllLinks()}
+        {NavLinks()}
       </StyledNav>
     </StyledHeader>
   );

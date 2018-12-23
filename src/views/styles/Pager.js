@@ -14,7 +14,7 @@ const Pager = ({ currentPage, totalPages, updatePage }) => {
   const page = (currentPage) ? currentPage : 0;
 
   let previousButton = null;
-  if(page > 0) {
+  if (page > 0) {
     previousButton =
       <PageButton onClick={() => updatePage(page - 1)} >
         Previous
@@ -22,7 +22,7 @@ const Pager = ({ currentPage, totalPages, updatePage }) => {
   }
 
   let nextButton = null;
-  if(page < totalPages - 1) {
+  if (page < totalPages - 1) {
     nextButton =
       <PageButton onClick={() => updatePage(page + 1)} >
         Next

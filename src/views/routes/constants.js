@@ -4,18 +4,18 @@ import Home from '../content/home';
 
 export const ROUTES = {
   ABOUT: {
-    path: '/about',
     Component: About,
-    linkTo: () => '/about'
+    path: '/about',
+    linkTo: () => '/about',
+    nav: true,
+    label: 'About',
   },
   HOME: {
-    path: '/home',
     Component: Home,
-    linkTo: () => '/home'
+    path: '/home',
+    linkTo: () => '/home',
+    default: true,
+    nav: true,
+    label: 'Home',
   },
 };
-
-export const LINKS = [
-  { label: 'Home', path: '/home' },
-  { label: 'About', path: '/about' }
-];
