@@ -2,16 +2,19 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const StyledLink = styled(Link)`
-  box-sizing: border - box;
-
-  text-decoration: none;
-  color: ${ ({ theme }) => theme.secondary};
+  box-sizing: border-box;
   margin: 5px;
   padding: 8px;
-  border: 1px solid white;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  background-color: ${ ({ theme }) => theme.darkgreen};
+  border: 1px solid ${ ({ theme }) => theme.black};
 
   &:hover {
-    color: ${ ({ theme }) => theme.darksecondary};
-    border: 1px solid ${ ({ theme }) => theme.darksecondary};
+    background-color: ${ ({ theme }) => theme.lightgreen};
+
+    /* color: ${ ({ theme }) => theme.darksecondary};
+    border: 1px solid ${ ({ theme }) => theme.darksecondary}; */
   }
 `;

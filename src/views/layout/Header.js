@@ -6,20 +6,15 @@ const StyledNav = styled.nav`
   margin: 0px 0px 15px 0px;
 `;
 
-const StyledHeader = styled.header`
-  background-color: ${ ({ theme }) => theme.primary};
-  color: ${ ({ theme }) => theme.secondary};
-`;
-
 const Header = () => {
 
   return (
-    <StyledHeader>
+    <header>
       <h1>Jack Toumey</h1>
       <StyledNav>
         {NavLinks()}
       </StyledNav>
-    </StyledHeader>
+    </header>
   );
 };
 

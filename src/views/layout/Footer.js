@@ -2,16 +2,26 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
-  background-color: ${ ({ theme }) => theme.primary};
+  color: black;
   p {
-      color: ${ ({ theme }) => theme.secondary};
+    margin: 5px auto;
   }
+`;
+
+const GithubLink = styled.a`
+  font-weight: bolder;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
 `;
 
 const Footer = () => {
   return (
     <StyledFooter>
-      <p>Written by Jack Toumey - 2018</p>
+      <p>Copyright &copy; 2018. All rights reserved.</p>
+      <GithubLink href="https://github.com/miloofcroton/portfolio">This website</GithubLink>
+      {' by '}
+      <GithubLink href="https://github.com/miloofcroton">me</GithubLink>.
     </StyledFooter>
   );
 };

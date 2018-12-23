@@ -1,8 +1,17 @@
 // core pages
-import About from '../content/about';
 import Home from '../content/home';
+import About from '../content/about';
 
 export const ROUTES = {
+  HOME: {
+    Component: Home,
+    path: '/',
+    linkTo: () => '/',
+    default: true,
+    nav: true,
+    order: 1,
+    label: 'Home',
+  },
   ABOUT: {
     Component: About,
     path: '/about',
@@ -10,14 +19,5 @@ export const ROUTES = {
     nav: true,
     order: 2,
     label: 'About',
-  },
-  HOME: {
-    Component: Home,
-    path: '/home',
-    linkTo: () => '/home',
-    default: true,
-    nav: true,
-    order: 1,
-    label: 'Home',
   },
 };
