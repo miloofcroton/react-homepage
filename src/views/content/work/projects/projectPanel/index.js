@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import ProjectSearch from './projectSearch';
+import ProjectSearch from './ProjectSearch';
 import ProjectList from './projectList';
 
 
@@ -25,7 +25,7 @@ export default class ProjectPanel extends PureComponent {
   static propTypes = {
     projects: PropTypes.array,
     selected: PropTypes.object,
-    onSelect: PropTypes.func
+    onSelect: PropTypes.func,
   };
 
   state = {
@@ -38,12 +38,35 @@ export default class ProjectPanel extends PureComponent {
     }
   };
 
+  sortOptions = {
+    dateNewOld: {
+      key: 'date',
+      direction: -1,
+      title: 'Date: New to Old'
+    },
+    dateOldNew: {
+      key: 'date',
+      direction: 1,
+      title: 'Date: Old to New'
+    },
+    titleAZ: {
+      key: 'title',
+      direction: 1,
+      title: 'Title: A to Z'
+    },
+    titleZA: {
+      key: 'title',
+      direction: -1,
+      title: 'Title: Z to A'
+    },
+  };
+
   handleFilter = filter => {
     this.setState({ filter });
   };
 
-  handleSort = sort => {
-    this.setState({ sort });
+  handleSort = key => {
+    this.setState({ sort: this.sortOptions[key] });
   };
 
   filteredProjects = () => {
@@ -72,6 +95,7 @@ export default class ProjectPanel extends PureComponent {
         <ProjectSearch
           onFilter={this.handleFilter}
           onSort={this.handleSort}
+          sortOptions={this.sortOptions}
         />
         <ProjectList
           projects={this.sortedProjects()}

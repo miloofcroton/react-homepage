@@ -18,7 +18,6 @@ const ProjectView = ({ project }) => {
       {
         !!project ?
           <ProjectContent project={project} />
-          // project.tags
           :
           <h2>Select a project on the left!</h2>
       }
