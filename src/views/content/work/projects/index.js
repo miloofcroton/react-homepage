@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import ProjectPanel from './ProjectPanel';
 import ProjectView from './ProjectView';
 
-import projects from '../../../../data/fixtures/projects';
+import projects from '../../../../data/static/projects';
 
 const ProjectsWrapper = styled.div`
   display: grid;
@@ -14,18 +14,25 @@ const ProjectsWrapper = styled.div`
 export default class Projects extends PureComponent {
 
   state = {
-    selectedProject: '',
+    selectedProject: {},
     projects: projects
   };
 
-  handleSelect(project) {
-    this.selectedProject = project;
-  }
+  handleSelect = (project) => {
+    this.setState({ selectedProject: project });
+  };
 
   render() {
+
+    const { selectedProject } = this.state;
+
     return (
       <ProjectsWrapper>
-        <ProjectPanel />
+        <ProjectPanel
+          projects={projects}
+          selected={selectedProject}
+          onSelect={this.handleSelect}
+        />
         <ProjectView />
       </ProjectsWrapper>
     );
