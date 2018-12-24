@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
 
 const IconImg = styled.img`
@@ -15,9 +15,17 @@ export const TechIcon = ({ tag }) => {
   };
 
   return (
-    <IconImg
-      src={url(tag)}
-      alt={tag}
-    />
+    <IconImg src={url(tag)} alt={tag} />
   );
 };
+
+// export const TechList = ({ techList }) => {
+
+//   const techCards = techList.map(tech => {
+//     return <TechIcon key={tech} tag={tech} />;
+//   });
+
+//   return (
+//     <Fragment>{techCards}</Fragment>
+//   );
+// };

@@ -18,7 +18,7 @@ const ProjectList = ({ projects, selected, onSelect }) => {
         key={project.title}
         project={project}
         onSelect={onSelect}
-        selected={project.title == selected.title ? true : false}
+        selected={(!!selected && selected.title == project.title) ? true : false}
       />
     );
   });

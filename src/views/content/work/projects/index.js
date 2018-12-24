@@ -14,7 +14,7 @@ const ProjectsWrapper = styled.div`
 export default class Projects extends PureComponent {
 
   state = {
-    selectedProject: {},
+    selectedProject: null,
     projects: projects
   };
 
@@ -33,7 +33,9 @@ export default class Projects extends PureComponent {
           selected={selectedProject}
           onSelect={this.handleSelect}
         />
-        <ProjectView />
+        <ProjectView
+          project={selectedProject}
+        />
       </ProjectsWrapper>
     );
   }
