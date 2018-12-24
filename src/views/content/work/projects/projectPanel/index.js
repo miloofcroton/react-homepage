@@ -2,8 +2,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import ProjectSearch from './ProjectSearch';
-import ProjectList from './ProjectList';
+import ProjectSearch from './projectSearch';
+import ProjectList from './projectList';
 
 
 const ProjectPanelWrapper = styled.div`

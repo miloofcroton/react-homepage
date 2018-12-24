@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
-import ProjectPanel from './ProjectPanel';
-import ProjectView from './ProjectView';
+import ProjectPanel from './projectPanel';
+import ProjectView from './projectView';
 
 import projects from '../../../../data/static/projects';
 
