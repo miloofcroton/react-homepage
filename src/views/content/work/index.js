@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Profile from './profile';
+
 const Work = () => {
   return (
     <section>
-      <h2>more work coming soon!</h2>
+      <Profile/>
     </section>
   );
 };

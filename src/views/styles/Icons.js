@@ -3,15 +3,21 @@ import styled from 'styled-components';
 
 const IconImg = styled.img`
   width: 36px;
+  height: 36px;
   margin: 5px;
+  display: inline-block;
 `;
 
-export const SmallIcon = ({ image }) => {
+export const TechIcon = ({ tag }) => {
+
+  const url = tag => {
+    return require('../../assets/tech/' + tag.toLowerCase() + '.png');
+  };
 
   return (
     <IconImg
-      src={image.url}
-      alt={image.tag}
+      src={url(tag)}
+      alt={tag}
     />
   );
 };
