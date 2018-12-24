@@ -42,6 +42,7 @@
           }
         ],
         "array-bracket-spacing": "error",
+        "no-extra-boolean-cast":"off",
         "babel/no-invalid-this": 1,
         "babel/semi": 1,
         "react/prop-types": "off"
