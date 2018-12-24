@@ -13,7 +13,7 @@ const Statements = () => {
   return (
     <Fragment>
       <p>Copyright &copy; 2018. All rights reserved.</p>
-      <GithubLink href="https://github.com/miloofcroton/portfolio">This website</GithubLink>
+      <GithubLink href="https://github.com/miloofcroton/homepage">This website</GithubLink>
       {' by '}
       <GithubLink href="https://github.com/miloofcroton">me</GithubLink>.
     </Fragment>
