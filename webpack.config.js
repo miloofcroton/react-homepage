@@ -11,8 +11,8 @@ module.exports = env => {
 
   const devPlugins = isProd ? [] : [
     // new BundleAnalyzerPlugin()
-    new HtmlPlugin({ template: './src/index.html' }),
-    new Dotenv({ path: path.resolve(__dirname, './.env') }),
+    // new HtmlPlugin({ template: './src/index.html' }),
+    // new Dotenv({ path: path.resolve(__dirname, './.env') }),
   ];
 
   return {
@@ -27,7 +27,7 @@ module.exports = env => {
       historyApiFallback: true
     },
     plugins: [
-      new CleanPlugin('./dist/bundle.*.js'),
+      // new CleanPlugin('./dist/bundle.*.js'),
       ...devPlugins
     ],
     module: {

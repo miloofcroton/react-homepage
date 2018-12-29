@@ -9,8 +9,23 @@
   "scripts": {
     "test": "jest",
     "test:watch": "npm run test -- --watch",
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --hot --mode development"
+    "start": "npm-run-all prepare-content -p start:content start:app start:cms",
+    "start:app": "webpack-dev-server --hot --mode development",
+    "start:content": "chokidar 'content/**/**' -c 'npm run prepare-content'",
+    "start:cms": "chokidar 'cms/cms.js' -c 'cd cms && npm run build'",
+    "build": "npm-run-all -s prepare-content build:cms build:app build:postcss build:react-snapshot build:sitemap build:sw build:sha",
+    "build:app": "webpack --mode production",
+    "build:cms": "cd cms && NODE_ENV=production npm run build",
+    "build:postcss": "postcss build/static/css/*.css -r",
+    "build:react-snapshot": "react-snapshot",
+    "build:sw": "sw-precache --config='sw-precache-config.js'",
+    "build:sitemap": "node ./functions/generate-sitemap.js",
+    "build:sha": "git rev-parse HEAD > build/sha",
+    "parse-content": "node ./functions/parse-content.js",
+    "prepare": "npm run install:cms",
+    "install:cms": "cd cms && npm i",
+    "resize-images": "node ./functions/resize-images.js",
+    "prepare-content": "npm-run-all -s parse-content resize-images"
   },
   "repository": {
     "type": "git",
@@ -27,7 +42,6 @@
   "bugs": {
     "url": "https://github.com/miloofcroton/homepage/issues"
   },
-  "homepage": "https://github.com/miloofcroton/homepage#readme",
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
@@ -82,7 +96,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.6.3",
     "@fortawesome/react-fontawesome": "^0.1.3",
     "dotenv-webpack": "^1.5.7",
-    "i": "^0.3.6",
     "npm": "^6.5.0",
     "react": "^16.7.0-alpha.0",
     "react-dom": "^16.7.0-alpha.0",
