@@ -1,7 +1,7 @@
-const cssnext = require('postcss-cssnext')
+const postcssPresetEnv = require('postcss-preset-env')
 module.exports = {
   plugins: [
-    cssnext({
+    postcssPresetEnv({
       features: {
         customProperties: {
           preserve: true

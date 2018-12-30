@@ -1,11 +1,10 @@
-siteTitle: Netlify CMS + React Starter
+siteTitle: Jack Toumey
 siteUrl: 'https://toumey.netlify.com'
 siteDescription: >-
-  A starter project for creating lightning-fast, offline-first websites with
-  Netlify CMS and React.
+  A personal website written in React
 socialMediaCard:
   image: /images/uploads/card-og.png
-  twitterCreatorAccount: '@Jinksi'
+  twitterCreatorAccount: '@JackToumey'
   twitterSiteAccount: ''
 headerScripts: |-
   <!-- Add your analytics scripts / verification meta here -->
